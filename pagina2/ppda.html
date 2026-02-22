@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFAL - Punto Piloto de Alimentación</title>
+</head>
+<body>
+    <h1>PUNTO PILOTO DE ALIMENTACIÓN</h1>
+    <h3>Contenedores de los Llanos</h3>
+    <p>Punto de alimentación gestionado dentro del proyecto piloto de Colonias Felinas de Algarrobo.
+</p>
+<br><br><br>
+
+
+
+
+
+
+    <h2>PROYECTO PILOTO:</h2>
+    <p>Este proyecto piloto pone a prueba un modelo organizado de punto de alimentación para evaluar su eficacia en el control poblacional, la salud de los gatos y el mantenimiento de un entorno limpio y ordenado.</p>
+    <img src="" alt="Aquí debería de ir una foto del punto piloto">
+    <p>Este punto de alimentación está diseñado para que los gatos puedan comer de forma tranquila y ordenada. Sus compartimentos reducen conflictos entre ellos, los materiales son resistentes y económicos, y la comida queda protegida de la lluvia y del sol. La estructura también ayuda a mantener un seguimiento organizado de la colonia.</p>
+    <a href="/COFAL/pagina3/nda.html"><h4>👉 Ver normas de alimentación</h4></a>
+    <br><br><br>
+    <h2>ESTADO ACTUAL DE LA COLONIA:</h2>
+    <table border="2">
+        <tr>
+            <th>Total de gatos</th>
+            <td>14</td>
+        </tr>
+        <tr>
+            <th>Esterilizados</th>
+            <td>11</td>
+        </tr>
+        <tr>
+            <th>Pendientes</th>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th>% esterilizados</th>
+            <td>79%</td>
+        </tr>
+        <tr>
+            <th>Última actualización</th>
+            <td>febrero 2026</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+
+
+
+    <h2>GALERÍA DE IDENTIFICACIÓN</h2>
+    <h3>Registro visual de los gatos que forman parte de esta colonia.</h3>
+    <button onclick="resetTable()">Todos</button>
+    <button onclick="estTable()">Esterilizados</button>
+    <button onclick="penTable()">Pendientes</button>
+    <table border="2" id="myTable">
+        <thead>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Sexo</th>
+            <th>Esterilización</th>
+            <th>Salud visible</th>
+            <th>Carácter</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre</td>
+                <td><img src="./cats/Alicia_2025.jpg" alt="imagen de gato" style="width:200px; height:auto;"></td>
+                <td>Sexo</td>
+                <td>Sí</td>
+                <td>Salud visible</td>
+                <td>Carácter</td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><img src="" alt="imagen de gato" style="width:200px; height:auto;"></td>
+                <td>Sexo</td>
+                <td>Sí</td>
+                <td>Salud visible</td>
+                <td>Carácter</td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><img src="" alt="imagen de gato" style="width:200px; height:auto;"></td>
+                <td>Sexo</td>
+                <td>Pendiente</td>
+                <td>Salud visible</td>
+                <td>Carácter</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <!--Código de filtro 👇-->
+    <script>
+        function estTable() {
+            const rows = document.querySelectorAll("#myTable tbody tr");
+
+            rows.forEach(row => {
+                const status = row.cells[3].textContent;
+                if (status !== "Sí") {
+                    row.style.display = "none";
+                }
+                if (status == "Sí") {
+                    row.style.display = "";
+                }
+            });
+        }
+        function penTable() {
+            const rows = document.querySelectorAll("#myTable tbody tr");
+
+            rows.forEach(row => {
+                const status = row.cells[3].textContent;
+                if (status !== "Pendiente") {
+                    row.style.display = "none";
+                }
+                if (status == "Pendiente") {
+                    row.style.display = "";
+                }
+            });
+        }
+
+        function resetTable() {
+            const rows = document.querySelectorAll("#myTable tbody tr");
+
+            rows.forEach(row => {
+                row.style.display = "";
+            });
+        }
+    </script>
+    <!--Código de filtro 👆-->
+
+    <p>Este punto de alimentación se mantiene mediante alimentación responsable, esterilización y seguimiento continuo. Si quieres colaborar con proyectos similares en el futuro, puedes apuntarte en la sección <a href="/COFAL/pagina5/cc.html">“Cómo colaborar”</a>.</p>
+</body>
+</html>
