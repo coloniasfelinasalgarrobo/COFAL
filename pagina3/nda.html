@@ -19,9 +19,34 @@
             
         <a href="/COFAL/pagina6/contacto.html"><button>Contáctanos</button></a>
     </header>
-    <img src="/COFAL/images/Normas Alimentacion.png" style="width: 100%; height: auto;" alt="Normas de Alimentación">
+    <br><br><br>
+    <button onclick="espanol()">Español</button>
+    <button onclick="ingles()">English</button>
+    <button onclick="frances()">Français</button>
+    <button onclick="aleman()">Deutsch</button>
+    <br>
+    <img src="/COFAL/images/Normas Alimentacion.png" style="width: 100%; height: auto;" alt="Normas de Alimentación" id="normasdealimentacion">
+    <script>
+        function espanol() {
+            const imagen = document.getElementById("normasdealimentacion");
+            imagen.src = "/COFAL/images/Normas Alimentacion.png";
+        }
+        function ingles() {
+            const imagen = document.getElementById("normasdealimentacion");
+            imagen.src = "/COFAL/images/Normas Alimentacion_english.png";
+        }
+        function frances() {
+            const imagen = document.getElementById("normasdealimentacion");
+            imagen.src = "/COFAL/images/Normas Alimentacion_frances.png";
+        }
+        function aleman() {
+            const imagen = document.getElementById("normasdealimentacion");
+            imagen.src = "/COFAL/images/Normas Alimentacion_aleman.png";
+        }
+    </script>    
 </body>
 
 </html>
+
 
 
