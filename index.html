@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COFAL - Colonias Felinas Algarrobo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
         header {
             background-color: rgb(164, 205, 211);
             display: flex;
-            align-items: center;
+            justify-content: space-between; /* separa izquierda y derecha */
+            align-items: center;            /* centra verticalmente */
+            padding: 20px;
         }
-        header nav {
+
+        header img {
+            height: 150px; /* ajusta tamaño del logo */
+        }
+
+        nav {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 5px;
+            gap: 15px; /* espacio entre botones */
         }
         button {
             background-color: rgb(59, 104, 62);
@@ -22,14 +28,14 @@
             font-size: 16px;
             font-weight: bold;
         }
-        {
-        font-family: Arial, sans-serif;
+        body {
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="./images/COFAL_Logotipo-removebg-preview.png" style="justify-content: width:150px; height:auto;">
+        <img src="./images/COFAL_Logotipo-removebg-preview.png">
 
         <nav>
             <a href="./pagina2/ppda.html"><button>PUNTO PILOTO</button></a>
@@ -70,6 +76,7 @@
 </body>
 
 </html>
+
 
 
 
