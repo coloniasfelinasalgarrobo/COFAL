@@ -55,65 +55,14 @@
     <h4>Este proyecto se encuentra en fase piloto. Nuestro objetivo es ampliarlo a otros puntos del municipio. Si el proyecto funciona, iremos incorporando nuevas personas y colonias de forma progresiva.</h4>
     <br>
     <h3>🐾 ¿Ya alimentas una colonia? Puedes ser <a href="/COFAL/pagina5/cc2.html">ALIMENTADOR/A DE REFENCIA</a> con nosotros.</h3><br>
-    <h2>LISTA DE COLABORACIÓN</h2>
-    <h3>Actualmente estamos recogiendo el interés de personas que quieran colaborar.</h3>
-    <h4>Si deseas participar, puedes dejarnos tus datos indicando en qué tipo de colaboración estarías interesado.</h4>
+   
+    <h2>OTRAS FORMAS DE COLABORAR</h2>
+    <p> No es necesario asumir la responsabilidad completa del punto para poder ayudar. Existen distintas maneras de colaborar según tu disponibilidad y posibilidades:</p>
+    <h3>Apoyo en la Alimentación responsable</h3>
+    <p>Puedes colaborar en turnos puntuales de alimentación, siguiendo las normas del punto. Esto incluye reponer comida y agua, y mantener la zona limpia después de cada visita.</p>
     <br>
-    <form id="myForm">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required>
-
-        <br><br>
-
-        <label>Correo:</label>
-        <input type="email" name="email" required>
-
-        <br><br>
-
-        <label>Número de teléfono:</label>
-        <input type="tel" name="phonenumber" required>
-
-        <br><br>
-
-        <label>Tipo de ayuda:</label>
-        <textarea name="ayuda" rows="1" required></textarea>
-
-        <br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-    <script>
-        (function(){
-            emailjs.init("edA6yeKkc4mavp7PH");
-        })();
-
-        document.getElementById("myForm").addEventListener("submit", function(e){
-            e.preventDefault();
-
-            emailjs.send("service_b4uak9w","template_5xlc09j",{
-                nombre: document.querySelector("[name=nombre]").value,
-                email: document.querySelector("[name=email]").value,
-                phonenumber: document.querySelector("[name=phonenumber]").value,
-                ayuda: document.querySelector("[name=ayuda]").value
-            })
-            .then(function(){
-                alert("Enviado!");
-            })
-            .catch(function(error){
-                alert("Ha ocurrido un error. No se ha enviado.");
-                console.error("EmailJS error:", error);
-            });
-        });
-    </script> <br>
-    <h2>FORMAS DE COLABORAR</h2>
-    <h3>Alimentación responsable</h3>
-    <p>Las personas voluntarias pueden ayudar en turnos de alimentación siguiendo las normas del punto. Esto incluye reponer comida y agua y mantener la zona limpia.</p>
-    <br>
-    <h3>Apoyo en capturas para esterilización</h3>
-    <p>La esterilización es fundamental para el control de la colonia. Algunas personas colaboran ayudando en la captura y traslado de gatos al veterinario.</p>
+    <h3>Ayuda en capturas para esterilización</h3>
+    <p>La esterilización es fundamental para el control y bienestar de la colonia. Se puede colaborar apoyando en la captura y traslado de los gatos al veterinario cuando sea necesario.</p>
     <br>
     <h3>Apoyo económico o donaciones de alimento</h3>
     <p>También es posible colaborar mediante donaciones destinadas a alimento o atención veterinaria.</p>
@@ -137,6 +86,7 @@
 </footer>
 
 </html>
+
 
 
 
