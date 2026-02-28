@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFAL - Colonias Felinas Algarrobo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        header {
+            background-color: rgb(164, 205, 211);
+            display: flex;
+            justify-content: space-between; /* separa izquierda y derecha */
+            align-items: center;            /* centra verticalmente */
+            padding: 20px;
+        }
+
+        header img {
+            height: 150px; /* ajusta tamaño del logo */
+        }
+
+        nav {
+            gap: 15px; /* espacio entre botones */
+        }
+        button {
+            background-color: rgb(59, 104, 62);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <img src="/COFAL/images/COFAL_Logotipo-removebg-preview.png" style="width:150px; height:auto;">
+        <nav>
+            <a href="/COFAL/index.html"><button>INICIO</button></a>
+    
+            <a href="/COFAL/pagina2/ppda.html"><button>PUNTO PILOTO</button></a>
+    
+            <a href="/COFAL/pagina3/nda.html"><button>NORMAS DE ALIMENTACIÓN</button></a>
+                
+            <a href="/COFAL/faqs/faqs.html"><button>FAQs</button></a>
+                          
+            <a href="/COFAL/pagina6/contacto.html"><button>CONTACTA</button></a>
+        </nav>
+    </header>
+    <h1>Cómo colaborar</h1>
+    <h3>Este proyecto se encuentra en fase piloto. Nuestro objetivo es probar un modelo organizado de gestión de colonias felinas antes de ampliarlo a otros puntos del municipio. Si el proyecto funciona, iremos incorporando nuevas personas y colonias de forma progresiva.</h3>
+    <br><br><br>
+    <h3>🐾 ¿Ya alimentas una colonia? Puedes ser ALIMENTADOR/A DE REFENCIA con nosotros.</h3>
+    <h2>FORMAS DE COLABORAR</h2>
+    <h3>Alimentación responsable</h3>
+    <p>Las personas voluntarias pueden ayudar en turnos de alimentación siguiendo las normas del punto. Esto incluye reponer comida y agua y mantener la zona limpia.</p>
+    <br>
+    <h3>Apoyo en capturas para esterilización</h3>
+    <p>La esterilización es fundamental para el control de la colonia. Algunas personas colaboran ayudando en la captura y traslado de gatos al veterinario.</p>
+    <br>
+    <h3>Apoyo económico o donaciones de alimento</h3>
+    <p>También es posible colaborar mediante donaciones destinadas a alimento o atención veterinaria.</p>
+    <br>
+    <h3>Coordinación de futuros puntos de alimentación</h3>
+    <p>Si en el futuro se abren nuevos puntos, serán necesarios coordinadores que organicen turnos y lleven el seguimiento de su colonia.</p>
+    <br><br><br>
+    <h2>LISTA DE ESPERA</h2>
+    <h3>Actualmente estamos recogiendo el interés de personas que quieran colaborar en futuras fases del proyecto.</h3>
+    <h4>Si deseas participar, puedes dejarnos tus datos indicando en qué tipo de colaboración estarías interesado.</h4>
+    <br>
+    <form id="myForm">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <br><br>
+
+        <label>Correo:</label>
+        <input type="email" name="email" required>
+
+        <br><br>
+
+        <label>Número de teléfono:</label>
+        <input type="tel" name="phonenumber" required>
+
+        <br><br>
+
+        <label>Tipo de ayuda:</label>
+        <textarea name="ayuda" rows="1" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function(){
+            emailjs.init("edA6yeKkc4mavp7PH");
+        })();
+
+        document.getElementById("myForm").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            emailjs.send("service_b4uak9w","template_5xlc09j",{
+                nombre: document.querySelector("[name=nombre]").value,
+                email: document.querySelector("[name=email]").value,
+                phonenumber: document.querySelector("[name=phonenumber]").value,
+                ayuda: document.querySelector("[name=ayuda]").value
+            })
+            .then(function(){
+                alert("Enviado!");
+            })
+            .catch(function(error){
+                alert("Ha ocurrido un error. No se ha enviado.");
+                console.error("EmailJS error:", error);
+            });
+        });
+    </script>
+</body>
+
+<footer>
+        <a href="/COFAL/index.html"><button>INICIO</button></a>
+
+        <a href="/COFAL/pagina2/ppda.html"><button>PUNTO PILOTO</button></a>
+
+        <a href="/COFAL/pagina3/nda.html"><button>NORMAS DE ALIMENTACIÓN</button></a>
+            
+        <a href="/COFAL/faqs/faqs.html"><button>FAQs</button></a>
+                      
+        <a href="/COFAL/pagina6/contacto.html"><button>CONTACTA</button></a>
+</footer>
+
+</html>
 
