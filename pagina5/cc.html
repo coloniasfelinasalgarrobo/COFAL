@@ -69,7 +69,60 @@
     <br>
     <h3>¿Quieres ser Alimentador/a de referencia?</h3>
     <h4>🐾 Más información <a href="/COFAL/pagina5/cc2.html">AQUÍ</a></h4>
-    <br><br>
+    <br>
+    <h2> LISTA DE COLABORACIÓN</h2>
+    <h3>Actualmente estamos recogiendo el interés de personas que quieran colaborar.</h3>
+    <h4>Si deseas participar, puedes dejarnos tus datos indicando en qué tipo de colaboración estarías interesado.</h4>
+    <br>
+    <form id="myForm">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <br><br>
+
+        <label>Correo:</label>
+        <input type="email" name="email" required>
+
+        <br><br>
+
+        <label>Número de teléfono:</label>
+        <input type="tel" name="phonenumber" required>
+
+        <br><br>
+
+        <label>Tipo de ayuda:</label>
+        <textarea name="ayuda" rows="1" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function(){
+            emailjs.init("edA6yeKkc4mavp7PH");
+        })();
+
+        document.getElementById("myForm").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            emailjs.send("service_b4uak9w","template_5xlc09j",{
+                nombre: document.querySelector("[name=nombre]").value,
+                email: document.querySelector("[name=email]").value,
+                phonenumber: document.querySelector("[name=phonenumber]").value,
+                ayuda: document.querySelector("[name=ayuda]").value
+            })
+            .then(function(){
+                alert("Enviado!");
+            })
+            .catch(function(error){
+                alert("Ha ocurrido un error. No se ha enviado.");
+                console.error("EmailJS error:", error);
+            });
+        });
+    </script>
 
 </body>
 
@@ -86,6 +139,7 @@
 </footer>
 
 </html>
+
 
 
 
