@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COFAL - Colonias Felinas Algarrobo</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
+        header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Logo */
+header img {
+    height: 60px;
+}
+
+/* Menú */
+nav {
+    display: flex;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+/* Empuja redes a la derecha */
+.redes {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+/* Iconos */
+.redes a {
+    font-size: 22px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #0077cc;
+}
         header {
             background-color: rgb(164, 205, 211);
             display: flex;
@@ -51,6 +87,15 @@
                 
             <a href="./pagina6/contacto.html"><button>CONTACTA</button></a>
         </nav>
+            <div class="redes">
+        <a href="https://www.facebook.com/COFAL" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/coloniasfelinasalgarrobo" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
     </header>
     <h1> COFAL - Colonias Felinas Algarrobo</h1>
     <h3>Cuidando y gestionando colonias felinas de forma responsable.</h3>
