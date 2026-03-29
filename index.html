@@ -35,6 +35,35 @@
         body {
             font-family: 'Poppins', sans-serif;
         } 
+
+                /* HEADER redes (debajo del menú, alineado con el logo) */
+        .redes-header {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        /* FOOTER redes (alineado a la izquierda) */
+        .redes-footer {
+            margin-top: 10px;
+        }
+        
+        /* BOTONES estilo bonito */
+        .redes-header a,
+        .redes-footer a {
+            background-color: rgb(59, 104, 62);
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        
+        /* Hover */
+        .redes-header a:hover,
+        .redes-footer a:hover {
+            background-color: rgb(80, 140, 90);
+        }
     </style>
 </head>
 <body>
@@ -52,6 +81,10 @@
                 
             <a href="./pagina6/contacto.html"><button>CONTACTA</button></a>
         </nav>
+        <div class="redes-header">
+            <a href="https://www.facebook.com/COFAL" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/coloniasfelinasalgarrobo" target="_blank">Instagram</a>
+        </div>
     </header>
     <h1> COFAL - Colonias Felinas Algarrobo</h1>
     <h3>Cuidando y gestionando colonias felinas de forma responsable.</h3>
@@ -75,6 +108,11 @@
         <a href="./pagina5/cc.html"><button>COLABORA</button></a>
             
         <a href="./pagina6/contacto.html"><button>CONTACTA</button></a>
+
+    <div class="redes-footer">
+        <a href="https://www.facebook.com/COFAL" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/coloniasfelinasalgarrobo" target="_blank">Instagram</a>
+</div>
     </footer>
 </body>
 
