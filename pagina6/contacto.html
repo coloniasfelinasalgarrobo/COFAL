@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COFAL - Colonias Felinas Algarrobo</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         header {
             background-color: rgb(164, 205, 211);
@@ -34,11 +35,75 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        /* HEADER redes (debajo del menú, alineado con el logo) */
+        .redes-header {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        /* FOOTER redes (alineado a la izquierda) */
+        .redes-footer {
+            margin-top: 10px;
+        }
+        
+        /* BOTONES estilo bonito */
+        .redes-header a,
+        .redes-footer a {
+            background-color: rgb(59, 104, 62);
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        
+        /* Hover */
+        .redes-header a:hover,
+        .redes-footer a:hover {
+            background-color: rgb(80, 140, 90);
+        }
+
+        .menu-bloque {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* alinea todo a la izquierda */
+        }
+        
+        .redes-header {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+                /* ICONOS redes */
+        .redes-header a,
+        .redes-footer a {
+            font-size: 24px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        /* Colores oficiales */
+        .facebook {
+            color: #1877F2;
+        }
+        
+        .instagram {
+            color: #E1306C;
+        }
+        
+        /* Hover (efecto suave) */
+        .redes-header a:hover,
+        .redes-footer a:hover {
+            opacity: 0.7;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <img src="/COFAL/images/COFAL_Logotipo-removebg-preview.png" style="width:150px; height:auto;">
+        <div class="menu-bloque">
         <nav>
             <a href="/COFAL/index.html"><button>INICIO</button></a>
     
@@ -50,6 +115,17 @@
                 
             <a href="/COFAL/pagina5/cc.html"><button>COLABORA</button></a>
         </nav>      
+           <div class="redes-header">
+            <a href="https://www.facebook.com/COFAL" target="_blank" class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/coloniasfelinasalgarrobo" target="_blank" class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        </div>
+
     </header>
     <h1>CONTACTO</h1>
     <h4>Si tienes preguntas sobre el proyecto o quieres colaborar, puedes escribirnos al correo del proyecto:</h4>
@@ -71,6 +147,15 @@
         <a href="/COFAL/faqs/faqs.html"><button>FAQs</button></a>
             
         <a href="/COFAL/pagina5/cc.html"><button>COLABORA</button></a>
+        <div class="redes-footer">
+            <a href="https://www.facebook.com/COFAL" target="_blank" class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        
+            <a href="https://www.instagram.com/coloniasfelinasalgarrobo" target="_blank" class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
 </footer>
 </html>
 
