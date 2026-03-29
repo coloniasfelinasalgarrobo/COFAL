@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COFAL - Colonias Felinas Algarrobo</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
     <style>
 
 /* Empuja redes a la derecha */
@@ -25,6 +26,26 @@
         .redes a:hover {
             color: #0077cc;
 }
+/* BOTÓN HAMBURGUESA */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+/* MÓVIL */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background: white;
+                width: 100%;
+                padding: 20px;
+            }
         header {
             background-color: rgb(164, 205, 211);
             display: flex;
@@ -58,10 +79,7 @@
 <body>
     <header>
         <img src="./images/COFAL_Logotipo-removebg-preview.png">
-    <!-- botón hamburguesa -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-        </div>
+
         <nav>
             <a href="./pagina2/ppda.html"><button>PUNTO PILOTO</button></a>
     
